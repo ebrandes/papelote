@@ -11,10 +11,10 @@ angular.module('papeloteApp')
     .service('user', function($resource, $q) {
         return {
             get: function() {
-                var resource = $resource("http://localhost:3000/users");
+                var resource = $resource("http://localhost:3000/api/users");
                 var deferred = $q.defer();
 
-                resource.get(
+                resource.query(
                     function(data) {
                         return deferred.resolve(data);
                     },

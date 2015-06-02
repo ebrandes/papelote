@@ -11,6 +11,6 @@ angular.module('papeloteApp')
   .controller('MainCtrl', function ($scope, user) {
         var retorno = user.get();
         retorno.then(function(response){
-                debugger;
+             //retornando users
         });
   });
